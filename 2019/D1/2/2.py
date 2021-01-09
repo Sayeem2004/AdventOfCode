@@ -14,5 +14,5 @@ def solve(nums):
             temp -= 2;
             ans += temp;
     return ans;
-
+    
 main();
