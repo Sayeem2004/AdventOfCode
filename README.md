@@ -5,4 +5,4 @@
 - Started 2020-12-1.
 - https://adventofcode.com/2020/events
 ## Ownership
-- All Input.in files were not created by me, but every other file in this repository was created by me
+- All Input.in files were not created by me, but every other file in this repository was created by me. 
