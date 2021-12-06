@@ -7,7 +7,7 @@ def main():
     fout.write(str(solve(lines)));
 
 def solve(lines):
-    lt = [[0 for x in range(2000)] for y in range(2000)];
+    lt = [[0 for x in range(1000)] for y in range(1000)];
     for line in lines:
         if (line[0][0] == line[1][0]):
             mx = max(line[0][1],line[1][1]);
