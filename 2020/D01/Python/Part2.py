@@ -1,5 +1,5 @@
-fin = open("2.in","r");
-fout = open("2.out","w");
+fin = open("../Input.in", "r");
+fout = open("../Part2.out", "w");
 
 def main():
     nums = [int(num.strip()) for num in fin.read().split("\n")[0:-1]];
@@ -13,5 +13,6 @@ def solve(nums):
                 if (nums[i]+nums[q]+nums[r] == 2020):
                     return nums[i]*nums[q]*nums[r];
                     break;
-
+    return -1;
+    
 main();
