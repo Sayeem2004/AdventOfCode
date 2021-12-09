@@ -1,8 +1,8 @@
 use std::fs;
 
 fn main() {
-    let fin = fs::read_to_string("../Input.in").expect("Input Error");
-    fs::write("../Part2.out",solve(fin)).expect("Output Error");
+    let fin = fs::read_to_string("../input.in").expect("Input Error");
+    fs::write("../part2.out",solve(fin)).expect("Output Error");
 }
 
 fn solve(fin: String) -> String {

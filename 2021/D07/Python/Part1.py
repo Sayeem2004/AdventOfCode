@@ -1,5 +1,5 @@
-fin = open("../Input.in", "r");
-fout = open("../Part1.out", "w");
+fin = open("../input.in", "r");
+fout = open("../part1.out", "w");
 
 def main():
     lines = [line.strip() for line in fin.read().split("\n")[0:-1]];
@@ -13,5 +13,5 @@ def solve(lines):
     for x in lines:
         ans += abs(x-med);
     return ans;
-    
+
 main();

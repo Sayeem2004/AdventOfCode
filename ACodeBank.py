@@ -1,5 +1,5 @@
-fin = open("../Input.in", "r");
-fout = open("../Part.out", "w");
+fin = open("../input.in", "r");
+fout = open("../part.out", "w");
 
 def main():
     lines = [line.strip() for line in fin.read().split("\n")[0:-1]];

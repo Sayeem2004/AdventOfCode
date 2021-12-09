@@ -1,5 +1,5 @@
-fin = open("../Input.in","r");
-fout = open("../Part2.out","w");
+fin = open("../input.in","r");
+fout = open("../part2.out","w");
 
 def main():
     line = fin.read();
@@ -12,5 +12,5 @@ def solve(line):
         if (x == ")"): floor-=1;
         if (floor == -1): return i+1;
     return -1;
-    
+
 main();

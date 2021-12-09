@@ -1,5 +1,5 @@
-fin = open("../Input.in", "r");
-fout = open("../Part1.out", "w");
+fin = open("../input.in", "r");
+fout = open("../part1.out", "w");
 
 
 def main():
@@ -14,5 +14,5 @@ def solve(nums):
                 return nums[i]*nums[q];
                 break;
     return -1;
-    
+
 main();
