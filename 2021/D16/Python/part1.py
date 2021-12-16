@@ -1,6 +1,4 @@
-pos = 0
-binary = ""
-
+pos,binary = 0,""
 
 def main():
     fin = open("../input.in", "r")
@@ -12,33 +10,26 @@ def main():
     binary = bin(decimal)[2:].zfill(length)
     fout.write(str(solve()))
 
+def adv(inc):
+    global pos
+    pos += inc
+    return binary[pos-inc:pos]
 
 def solve():
-    global pos
-    sm = 0
-    ver = int(binary[pos:pos+3], 2)
-    pos += 3
-    id = int(binary[pos:pos+3], 2)
-    pos += 3
+    sm = int(adv(3), 2)
+    id = int(adv(3), 2)
     if (id == 4):
-        while (binary[pos] == "1"):
-            pos += 5
-        pos += 5
+        while (binary[pos] == "1"): adv(5)
+        adv(5)
     else:
-        ind = int(binary[pos], 2)
-        pos += 1
+        ind = int(adv(1), 2)
         if (ind == 0):
-            length = int(binary[pos:pos+15], 2)
-            pos += 15
+            length = int(adv(15), 2)
             curr = pos
-            while (pos-curr < length):
-                sm += solve()
+            while (pos-curr < length): sm += solve()
         else:
-            length = int(binary[pos:pos+11], 2)
-            pos += 11
-            for i in range(length):
-                sm += solve()
-    return ver+sm
-
+            length = int(adv(11), 2)
+            for i in range(length): sm += solve()
+    return sm
 
 main()
