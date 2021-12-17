@@ -1,14 +1,12 @@
 import math
-pos,binary = 0,""
+pos, binary = 0, ""
 
 def main():
-    fin = open("../input.in", "r")
-    fout = open("../part2.out", "w")
+    fin, fout = open("../input.in", "r"), open("../part2.out", "w")
     hexadecimal = fin.read().split("\n")[0].strip()
     length = len(hexadecimal) * 4
-    decimal = int(hexadecimal, 16)
     global binary
-    binary = bin(decimal)[2:].zfill(length)
+    binary = bin(int(hexadecimal, 16))[2:].zfill(length)
     fout.write(str(solve()))
 
 def adv(inc):
@@ -25,11 +23,9 @@ def solve():
         val += adv(5)[1:]
         return int(val, 2)
     else:
-        vals = []
-        ind = int(adv(1), 2)
+        vals, ind = [], int(adv(1), 2)
         if (ind == 0):
-            length = int(adv(15), 2)
-            curr = pos
+            length, curr = int(adv(15), 2), pos
             while (pos-curr < length): vals.append(solve())
         else:
             length = int(adv(11), 2)
