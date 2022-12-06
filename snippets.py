@@ -1,9 +1,17 @@
 def main():
-    fin, fout = open("../input.in", "r"), open("../part.out", "w")
+    fin = open("input.in", "r")
     lines = [line.strip() for line in fin.read().split("\n")[0:-1]]
-    fout.write(str(solve(lines)))
 
-def solve(lines):
-    return lines
+    print("Part 1: " + str(part1(lines)))
+    print("Part 2: " + str(part2(lines)))
+
+
+def part1(lines):
+    return 0
+
+
+def part2(lines):
+    return 0
+
 
 main()
