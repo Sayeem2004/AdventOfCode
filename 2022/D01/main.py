@@ -1,30 +1,38 @@
-def main():
-    fin = open("input.in", "r")
-    lines = [line.strip() for line in fin.read()[0:-1].split("\n\n")]
+from io import FileIO
+
+
+def main() -> None:
+    fin: FileIO = open("input.in", "r")
+    lines: list[str] = [line.strip()
+                        for line in fin.read()[0:-1].split("\n\n")]
 
     print("Part 1: " + str(part1(lines)))
     print("Part 2: " + str(part2(lines)))
 
 
-def part1(lines):
-    mx = 0
+def part1(lines: list[str]) -> int:
+    mx: int = 0
 
     for inv in lines:
-        cnt = 0
+        cnt: int = 0
+
         for num in inv.split("\n"):
             cnt += int(num)
+
         mx = max(mx, cnt)
 
     return mx
 
 
-def part2(lines):
-    lt = []
+def part2(lines: list[str]) -> int:
+    lt: list[int] = []
 
     for inv in lines:
-        cnt = 0
+        cnt: int = 0
+
         for num in inv.split("\n"):
             cnt += int(num)
+
         lt.append(cnt)
 
     lt.sort()
